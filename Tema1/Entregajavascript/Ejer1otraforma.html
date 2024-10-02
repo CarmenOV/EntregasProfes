@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIMER EJERCICIO primera entrega 1.1 </title>
+    <!-- Crea un programa en el que muestres el resultado de varias operaciones de comparación
+    mediante alert, mostrando el texto exacto de la operación realizada y su resultado.-->
+</head>
+<body>
+    <script>
+        // declaro la variable op1 que es la que compara en este caso que se tiene que cumplir ( no es estricta si ponemos el 20 entre comillas lo toma como numero) 
+        // que 20 sea igual a 20 y devuelve true en caso de que la comparacion
+        // no fuese igual devolveria false ya que no se cumple la comparacion
+        //seria false si intentaras compara (20==200)
+        
+         alert("20 == 20 es " + ( 20==20));
+         
+         //compara estrictamente los dos numeros si alguno esta entre comillas pasa a ser cadena de caracteres por lo tanto nos daria flase
+         alert("20===20 es " + (20===20));
+
+         // compara como antes estrictamente los dos numeros, pero si pones 20,3 te da false 
+         alert("20===20.0 es " + (20 ===20.0));
+
+         // compara las dos cadenas de caracteres pero te saca false porque creo que es sensible a mayusculas y minuscuas javascript
+         alert("Juan==juan es "+ ("Juan"== "juan"));
+
+         // en este caso sale false pero no entiendo muy bien el porque 
+        alert("Juan > juan es "+ ("Juan">"juan"));
+         
+         //en este caso sale true pero no entiendo el porque 
+         alert("Juan < juan es "+ ("Juan"<"juan"));
+
+         // compara la cadena y el numero, pero al no ser estricta te sal true en cambio en la siguiente al si ser estricta 
+         //no es lo mismo una cadena de caracteres que un numero 
+         alert("123 == 123 es " + ("123"==123));
+
+         alert("123 === 123 es " + ("123"===123));
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 5 adivina el numero </title>
+</head>
+<body>
+    <script>
+        let numero = prompt("el que primero juega pon un numero ");
+        let numerobueno;
+
+        while(numero!=numerobueno){
+            numerobueno =prompt("el segundo que adivine");
+            if(numerobueno>numero){
+                alert("meno");
+
+            }else if(numerobueno<numero){
+                alert("mayor");
+            }else{
+                alert("bigno");
+            }
+        }
+    </script>
+    
+</body>
+</html>
