@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIMER EJERCICIO primera entrega 1.1 </title>
+    <!-- Crea un programa en el que muestres el resultado de varias operaciones de comparación
+    mediante alert, mostrando el texto exacto de la operación realizada y su resultado.-->
+</head>
+<body>
+    <script>
+        // declaro la variable op1 que es la que compara en este caso que se tiene que cumplir ( no es estricta si ponemos el 20 entre comillas lo toma como numero) 
+        // que 20 sea igual a 20 y devuelve true en caso de que la comparacion
+        // no fuese igual devolveria false ya que no se cumple la comparacion
+        //seria false si intentaras compara (20==200)
+        let op1= 20==20;
+         alert("20 == 20 es " + op1);
+         
+         //compara estrictamente los dos numeros si alguno esta entre comillas pasa a ser cadena de caracteres por lo tanto nos daria flase
+        let op2= 20===20;
+         alert("20===20 es " + op2);
+
+         // compara como antes estrictamente los dos numeros, pero si pones 20,3 te da false 
+         let op3= 20 ===20.0;
+         alert("20===20.0 es " + op3);
+
+         // compara las dos cadenas de caracteres pero te saca false porque creo que es sensible a mayusculas y minuscuas javascript
+         let op4 = "Juan"== "juan";
+         alert("Juan==juan es "+ op4);
+
+         // en este caso sale false pero no entiendo muy bien el porque 
+         let op5= "Juan">"juan";
+        alert("Juan > juan es "+ op5);
+         
+         //en este caso sale true pero no entiendo el porque 
+         let op6= "Juan"<"juan";
+         alert("Juan < juan es "+ op6);
+
+         // compara la cadena y el numero, pero al no ser estricta te sal true en cambio en la siguiente al si ser estricta 
+         //no es lo mismo una cadena de caracteres que un numero 
+         let op7= "123"==123;
+         alert("123 == 123 es " + op7);
+
+         let op8= "123"===123;
+         alert("123 === 123 es " + op8);
+
+    </script>
+    
+</body>
+</html>

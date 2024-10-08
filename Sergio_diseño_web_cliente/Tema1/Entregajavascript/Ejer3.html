@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 primera entrega 1.1</title>
+    <!--Crea un programa que pida al usuario que introduzca una edad y muestre el siguiente
+        mensaje en función del número introducido:
+         >18: absoluto
+         16-18: juvenil
+         14-15: cadete
+         12-13: infantil
+         10-11: alevín
+         8-9: benjamín
+        Si se introduce un número menor de 8 se mostrará un mensaje al respecto.-->
+</head>
+<body>
+    <script>
+        a=prompt("Dime cuantos años tienes ");
+        let mensaje;
+        if(a>19){
+            mensaje= "absoluto tienes 18"
+        }else if(a>=16){
+            mensaje=" juvenil tienes entre 16 y 18";
+        }else if(a>=14){
+            mensaje="cadete tienes entre 14 y 15"
+        }else if(a>=12){
+            mensaje="infantil tienes entre 12 y 13"
+        }else if(a>=10){
+            mensaje="eres alevin"
+        }else if(a>=8){
+            mensaje="eres benjamin";
+        }else{
+            mensaje=" eres mu chico";
+        }
+        alert(mensaje);
+    </script>
+</body>
+</html>

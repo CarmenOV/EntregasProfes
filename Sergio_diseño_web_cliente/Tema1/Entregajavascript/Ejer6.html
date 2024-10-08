@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6 igual que el 5 pero con un for en vez de con un while </title>
+</head>
+    <!-- 6. Realiza el mismo ejercicio anterior, pero sustituyendo el bucle while por un bucle for.
+    -->
+    <!--5. Utiliza el siguiente script en un fichero HTML y comprueba su funcionamiento.
+        Posteriormente, cambia la línea countdown— por countdown++ y comprueba de nuevo el
+        funcionamiento explicando qué ocurre.-->
+<body>
+    <script>
+        // la variable coutdown guarda el numero que el usuario de
+        var countdown = prompt("introduce un numero para iniciar la cuenta atras ");
+        // la condicion while se ejecutara mientras coutdown sea mayor a 0
+       /* while(countdown>0){
+            // hace que saque la alerta del numero y lo concatena con puntos suspensivos los cuales se podrian quitar no son necesarios
+            alert(countdown+ "...");
+            // el -- al lado de la variable es para que vaya quitando numero hacia a atras
+            // como cuando en un for pones i++ o i-- 
+            countdown--;
+        }*/
+       for(let i=countdown; countdown>0; countdown--){
+        alert(countdown);
+       }
+
+    </script>
+</body>
+</html>

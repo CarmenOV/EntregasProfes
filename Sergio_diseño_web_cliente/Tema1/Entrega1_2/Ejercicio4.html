@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 4. Realiza el ejercicio 2 utilizando un bucle while.
+    </title>
+</head>
+<body>
+    <script>
+        // declaro las variables y el numero asignado es el que da el usuario por teclado 
+        let columna =prompt("Dame un numero de columnas que quieres que tenga la tabla ");
+        let alto = prompt("Dame un numero para el alto de la columna en pixeles");
+        let ancho = prompt("dame un numero para que sea el ancho de la tabla ");
+        // imprimo por pantalla los datos para que se vea lo que en este caso es correcto
+        document.write("por tanto tu tabla tendria las siguientes medidas " +columna+ "columnas " + alto + " de alto "  + ancho + " de ancho ");
+       
+        document.write("<table border='1' cellspacing='2' bgcolor='balck' width='200' >");
+        document.write(" <tr bgcolor='grey' height= ' " +alto+  " ' '>");
+
+        // inicializo el contados a 0 para poder ejecutarlo en el while
+        let a =0;
+        while(a<columna){
+            document.write("<td width='" +ancho+ " ' bgcolor='white'></td>")
+            a++;
+        }
+
+
+
+        document.write(" </tr>");
+        document.write("</table>");
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
