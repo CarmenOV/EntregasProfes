@@ -1,0 +1,4 @@
+/* Ejercicio 5: Estilo diferente para el primer strong */
+section strong:first-of-type {
+    color: blue; 
+}

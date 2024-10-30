@@ -1,0 +1,38 @@
+/* Estilos para la navegación */
+nav {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative; /* Necesario para posicionar el símbolo */
+  }
+  
+  nav a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Sección general */
+  section {
+    padding: 20px;
+    transition: all 0.3s ease; /* Transición suave para los cambios de estilo */
+  }
+  
+  /* Estilo para la sección activa usando la pseudo-clase :target */
+  section:target h1 {
+    color: green;
+  }
+  
+  section:target p {
+    color: green;
+  }
+  
+  section:target h1::after {
+    content: " >";
+    color: green;
+  }
+  

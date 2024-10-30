@@ -1,0 +1,137 @@
+/*ejercicio1*/
+
+.uno{
+    border: 2px solid blue;
+
+}
+.dos{
+    border: 8px dotted green
+}
+.tres{
+    border: 4px dashed purple
+
+}
+
+.cuatro{
+    border: 3px double red;
+    border-top: 3px double rgb(192, 192, 16);
+}
+
+/* ejercicio2*/
+.pastilla1{
+    box-sizing: border-box;
+    background-color: blue;
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+    border-top-left-radius: 40px ;
+    border-top-right-radius: 40px;
+}
+.pastilla2{
+    box-sizing: border-box;
+    background-color: green;
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+    border-bottom-left-radius: 40px ;
+    border-bottom-right-radius: 40px;
+}
+.pastilla3{
+    box-sizing: border-box;
+    background-color: purple;
+    width: 150px;   
+    height: 150px;
+    margin: 15px;
+    border-radius: 50%;
+   /* border-top-left-radius: 80px ;
+    border-top-right-radius: 80px;
+    border-bottom-left-radius: 80px ;
+    border-bottom-right-radius: 80px;*/
+}
+
+
+/*ejercicio 3 */
+
+.a{
+    box-sizing: border-box;
+    background-color: darkslategrey;
+    width: 150px;
+    height: 100px;
+    border-radius: 0 0 50% 0;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin:20px;
+}
+.b{
+    box-sizing: border-box;
+    background-color: darkslategrey;
+    width: 150px;
+    height: 100px;  
+    border-radius: 0 0 25% 0;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin:20px;
+}
+.c{
+    box-sizing: border-box;
+    background-color: darkslategrey;
+    width: 150px;
+    height: 100px;
+    border-radius: 0 0% 60% 0%;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin:20px;
+}
+.d{
+    box-sizing: border-box;
+    background-color: darkslategrey;
+    width: 150px;
+    height: 100px;
+    border-radius:  20px 70px;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin:20px;
+}
+.e{
+    box-sizing: border-box;
+    background-color: darkslategrey;
+    width: 150px;
+    height: 100px;
+    border-radius: 60px/20px;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin:20px;
+}
+
+.my{
+    width: 300px; /* Ancho por defecto */
+    height: 150px; /* Alto por defecto */
+    border: 1px solid black;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+#section1 {
+    overflow: hidden;
+}
+
+#section2 {
+    height: 100px;
+    overflow-x: auto;
+}
+
+#section3 {
+    width: 150px;
+    height: 200px;
+    overflow-y: auto;
+}
+
+p {
+    margin: 0;
+}

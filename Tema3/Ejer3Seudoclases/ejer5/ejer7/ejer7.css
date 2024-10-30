@@ -1,0 +1,8 @@
+/* Ejercicio 7: Agregar caracteres "¡" y "!" alrededor de los elementos strong */
+strong::before {
+    content: "¡";
+}
+
+strong::after {
+    content: "!"; 
+}

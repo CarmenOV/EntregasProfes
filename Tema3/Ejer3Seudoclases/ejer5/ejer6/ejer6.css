@@ -1,0 +1,8 @@
+/* Ejercicio 6: Subrayar el primer carácter de cada día */
+section ol li {
+    position: relative; 
+}
+
+section ol li::first-letter {
+    text-decoration: underline; 
+}

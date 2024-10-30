@@ -1,0 +1,82 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Navegación sin fondo y alineada a la derecha */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Alineación a la derecha */
+    padding-right: 1rem; /* Separación de la derecha */
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: black; /* Color del texto normal */
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+article {
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 1.2rem; 
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+
+.articulo {
+    font-size: 1.8rem;
+    color: darkblue;
+}
+
+.articulo::first-letter {
+    color: blue;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+article p:first-of-type {
+    display: inline; }
+
+article p:first-of-type::before {
+    content: "✌️ Lorem ipsum dolor sit amet.";
+    color: green;
+}
+
+article p:first-of-type::after {
+    content: " consectetur adipiscing elit. - Aloja more don ✌️";
+    color: black;
+}
+
+article p:first-of-type::after {
+    content: " consectetur adipiscing elit. ";
+    color: black;
+}
+
+article p:first-of-type::after {
+    content: " - Aloja more don ✌️";
+    color: red 
+}

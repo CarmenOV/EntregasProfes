@@ -1,0 +1,13 @@
+/* Ejercicio 3: Subrayado en elementos pares y tachado en impares */
+section ol:first-of-type li:nth-child(even) {
+    text-decoration: underline; 
+}
+
+section ol:first-of-type li:nth-child(odd) {
+    text-decoration: line-through; 
+}
+
+/* Color verde para múltiplos de cuatro en la segunda lista */
+section ol:last-of-type li:nth-child(4n) {
+    color: green; 
+}

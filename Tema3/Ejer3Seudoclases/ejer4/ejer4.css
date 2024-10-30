@@ -1,0 +1,23 @@
+/* Inicializa el contador de capítulos */
+body {
+    counter-reset: chapter; /* Resetea el contador de capítulos */
+}
+
+/* Estilos para los títulos h2 (Capítulos) en color azul */
+h2:before {
+    content: "Capítulo " counter(chapter) ": ";
+    counter-increment: chapter;
+    color: blue; /* Color azul para el prefijo "Capítulo X" */
+}
+
+/* Inicializa el contador de subsecciones para cada capítulo (h2) */
+h2 {
+    counter-reset: section; /* Resetea el contador de subsecciones en cada nuevo capítulo */
+}
+
+/* Estilos para los subtítulos h3 (Subsecciones) */
+h3:before {
+    content: "Subsección " counter(chapter) "." counter(section) " - "; /* Añade "Subsección X.Y" antes del texto */
+    counter-increment: section;
+    color: green; /* El texto de "Subsección X.Y" en verde */
+}

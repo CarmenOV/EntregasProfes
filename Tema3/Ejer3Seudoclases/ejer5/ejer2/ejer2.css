@@ -1,0 +1,9 @@
+
+/* Ejercicio 2: Borde en el primer y último párrafo */
+section p:first-child {
+    border-bottom: 1px solid black; 
+}
+
+section p:last-child {
+    border-bottom: 1px solid black; 
+}

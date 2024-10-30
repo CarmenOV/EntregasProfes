@@ -1,0 +1,217 @@
+/* index.css */
+/* Asegúrate de que el cuerpo y el html ocupen el 100% de la altura */
+html, body {
+  padding: 0;
+  margin: 0;
+}
+main {
+  padding-bottom: 80px; /* Espacio para que no se superponga el footer */
+  position: relative;
+  z-index: 1;
+}
+
+
+h1 {
+  text-align: center;  
+  border-bottom: 3px solid rgb(0, 218, 36); /* Clear and visible border */
+  padding: 20px;
+  color: darkorange;
+  background-color: rgb(221, 218, 218);
+  margin: 0; /* Remove negative margins to avoid overlap */
+}
+
+/* Estilo para el nav principal */
+.menuCSS3 {
+  background-color: rgb(143, 234, 250); /* Color de fondo */
+  width: 80%;
+  position: sticky; /* Posiciona de forma sticky */
+  top: 0; /* Se fijará en la parte superior cuando se haga scroll */
+  z-index: 1; /* Coloca el menú encima de otros elementos */
+  margin-top: 0px; /* Añadir margen superior para separar del encabezado */
+}
+
+/* Listado principal del menú */
+.menuCSS3 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuCSS3 ul li {
+  position: relative;
+  display: inline-block; /* Coloca los elementos en línea horizontal */
+  margin-right: 30px; /* Ajustar espacio entre los elementos del menú */
+}
+
+.menuCSS3 ul li a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  box-sizing: border-box; /* Asegura que padding no cambie el tamaño */
+}
+
+.menuCSS3 ul li a:hover {
+  background-color: black; /* Cambia a color negro al pasar el cursor */
+}
+
+/* Submenú oculto inicialmente */
+.menuCSS3 ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%; /* Coloca el submenú justo debajo del elemento principal */
+  left: 0;
+  background-color: black; /* Fondo negro cuando se despliega */
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Asegura que tenga el mismo ancho que el elemento principal */
+  box-sizing: border-box;
+}
+
+.menuCSS3 ul li:hover ul {
+  display: block; /* Muestra el submenú al pasar el cursor */
+}
+
+.menuCSS3 ul li ul li a {
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%; /* Asegura que el ancho del submenú sea constante */
+  box-sizing: border-box;
+}
+
+.menuCSS3 ul li ul li a:hover {
+  background-color: orangered; /* Cambia a color orangered al pasar el cursor en submenú */
+}
+
+
+
+/* Estilo para el nuevo menú (submenuCSS) */
+.submenuCSS {
+  width: 150px; /* Ancho reducido del nuevo menú */
+  margin: 0; /* Sin márgenes para estar pegado a la izquierda */
+}
+
+.submenuCSS ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.submenuCSS ul li {
+  display: block; /* Coloca los elementos en una columna vertical */
+}
+
+.submenuCSS ul li a {
+  display: block;
+  background-color: rgb(186, 216, 228);
+  color: black; /* Color del texto */
+  text-decoration: none;
+  border: 2px solid rgb(194, 194, 14); /* Borde amarillo alrededor de los enlaces */
+  position: relative; /* Para el uso de ::before */
+}
+
+/* Añadir emoji de mano antes del texto del enlace */
+.submenuCSS ul li a::before {
+  content: "✋"; /* Emoji de mano */
+  margin-right: 8px; /* Espacio entre el emoji y el texto */
+}
+
+/* Cambia a lightblue al pasar el cursor */
+.submenuCSS ul li a:hover {
+  background-color: rgb(0, 181, 241); /* Cambia a lightblue al pasar el cursor */
+}
+
+
+.contenedor-imagenes img:hover {
+  background-color: rgb(187, 187, 187); /* Fondo gris en hover */
+}
+
+.contenedor-imagenes {
+  position: sticky;
+  width: 330px; /* Ajustado para incluir espacio entre las imágenes */
+  margin: 0 auto; /* Centrar horizontalmente */
+  height: 200px; /* Altura del contenedor */
+  margin-bottom: 60px; /* Ajusta este valor según la altura del footer */
+}
+
+.contenedor-imagenes img {
+  position: absolute; /* Posiciona las imágenes de forma absoluta */
+  width: 90px; /* Reducimos el tamaño para incluir padding */
+  height: auto;
+  padding: 5px; /* Espacio alrededor de cada imagen */
+  background-color: white; /* Fondo blanco por defecto */
+}
+
+/* Colocación de las imágenes con posicionamiento absoluto */
+.contenedor-imagenes img:nth-child(1) { top: 0; left: 0; }
+.contenedor-imagenes img:nth-child(2) { top: 0; left: 110px; }
+.contenedor-imagenes img:nth-child(3) { top: 0; left: 220px; }
+
+.contenedor-imagenes img:nth-child(4) { top: 110px; left: 0; }
+.contenedor-imagenes img:nth-child(5) { top: 110px; left: 110px; }
+.contenedor-imagenes img:nth-child(6) { top: 110px; left: 220px; }
+
+.contenedor-imagenes img:nth-child(7) { top: 220px; left: 0; }
+.contenedor-imagenes img:nth-child(8) { top: 220px; left: 110px; }
+.contenedor-imagenes img:nth-child(9) { top: 220px; left: 220px; }
+
+
+footer {
+  position: relative; /* Mantiene el footer en su flujo normal */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black; /* Fondo negro */
+  color: blue; /* Color del texto azul */
+  padding: 10px 0; /* Aumentar el padding vertical */
+  height: 80px; /* Altura fija para el footer */
+  box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+/* Contenedor para el texto y flechas */
+.footer-content {
+  height: 100%; /* Altura completa del footer */
+  position: relative; /* Para que los elementos se alineen dentro de este contenedor */
+}
+
+/* Alinear el texto a la izquierda */
+.footer-left {
+  float: left; /* Colocar en el extremo izquierdo */
+  width: calc(50% - 25px); /* Ancho de la mitad menos espacio para la flecha */
+  text-align: left; /* Alinear texto a la izquierda */
+  padding-left: 30px; /* Espacio desde el borde */
+  line-height: 60px; /* Centrar verticalmente el texto */
+  position: relative; /* Para la flecha */
+}
+
+/* Alinear el texto a la derecha */
+.footer-right {
+  float: right; /* Colocar en el extremo derecho */
+  width: calc(50% - 25px); /* Ancho de la mitad menos espacio para la flecha */
+  text-align: right; /* Alinear texto a la derecha */
+  padding-right: 20px; /* Espacio desde el borde */
+  line-height: 60px; /* Centrar verticalmente el texto */
+  position: relative; /* Para la flecha */
+}
+
+/* Alinear la flecha hacia la izquierda */
+.footer-left::before {
+  content: "◀"; /* Flecha hacia la izquierda */
+  position: absolute;
+  left: 2px; /* Espacio desde el borde izquierdo */
+  top: 50%; /* Centrar verticalmente */
+  transform: translateY(-50%); /* Ajuste para centrar */
+  color: blue; /* Color de la flecha */
+}
+
+/* Alinear la flecha hacia la derecha */
+.footer-right::after {
+  content: "▶"; /* Flecha hacia la derecha */
+  position: absolute;
+  right: 10px; /* Espacio desde el borde derecho */
+  top: 50%; /* Centrar verticalmente */
+  transform: translateY(-50%); /* Ajuste para centrar */
+  color: blue; /* Color de la flecha */
+}

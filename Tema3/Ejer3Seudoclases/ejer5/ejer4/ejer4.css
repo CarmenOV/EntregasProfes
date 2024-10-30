@@ -1,0 +1,4 @@
+/* Ejercicio 4: Subrayar títulos en posiciones impares */
+section h2:nth-of-type(2n+1) {
+    text-decoration: underline; 
+}

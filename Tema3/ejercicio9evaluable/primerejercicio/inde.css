@@ -1,0 +1,93 @@
+.primeracaja {
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    
+}
+
+#primeracajaa{
+    color: transparent;
+    background: linear-gradient(to bottom, #5a158c, #9450c5 40%, #ff69b4);
+    background-clip: text;
+    
+}
+
+
+
+
+.segundacajaa{
+width: 1200px;
+height: 100px;
+background: linear-gradient(to right, #000, blue, yellow, green, red);
+
+}
+
+
+.terceracaja{
+  width: 1200px;
+  height: 200px;
+  background: repeating-linear-gradient(
+    to bottom, 
+    #0000ff,          /* Azul */
+    #0000ff 10px,     /* Tamaño de la franja azul */
+    #ffff00 10px,     /* Amarillo */
+    #ffff00 20px,     /* Tamaño de la franja amarilla */
+    #ff0000 20px,     /* Rojo */
+    #ff0000 30px      /* Tamaño de la franja roja */
+);
+}
+
+.cuartacaja{
+  width: 1200px;
+  height: 300px;
+  background: radial-gradient(circle, 
+    #ffff00,   /* Amarillo en el centro */
+    #ff4500,   /* Naranja rojizo intermedio */
+    #ff0000,   /* Rojo más afuera */
+    #000000    /* Negro en los bordes */
+);
+}
+
+.sexta{
+    width: 30%;
+    height: 200px;
+    background: radial-gradient(circle, yellow 0% 50%, red 55%, black 75%);
+}
+
+.quintacaja{
+    width: 30%;
+    height: 200px;
+    background: radial-gradient(yellow 0% 50%, red 55%, black 75%);}
+
+.septima{
+    width: 600px;
+    height: 400px;
+    background: radial-gradient(circle at left, yellow 0% 50%, red 65%, black 95%);
+}
+
+.octava{
+    width: 50%;
+  height: 200px;
+  background: radial-gradient(circle, blue, red 40%, yellow 75%);
+
+}
+
+.novena{
+    width: 50%;
+  height: 200px;
+  background: radial-gradient(blue, red 30%, yellow 60%);
+    
+}
+
+.diez{
+    background: repeating-radial-gradient(circle, #ff4444 0% 10%, #ff0000 10% 20%, #8b0000 20% 30%);
+    width: 50%;
+    height: 500px;
+}
+
+.once{
+    background: repeating-conic-gradient(yellow, red 24deg 36deg, blue 36deg, yellow 72deg);
+    width: 50%;
+    height: 500px;
+}

@@ -1,0 +1,16 @@
+table tr:first-child {
+    background-color: red;
+}
+
+table tr:last-child {
+    background-color: red;
+}
+
+
+table tr:nth-child(even):not(:first-child):not(:last-child) {
+    background-color: white;
+}
+
+table tr:nth-child(odd):not(:first-child):not(:last-child) {
+    background-color: blue;
+}

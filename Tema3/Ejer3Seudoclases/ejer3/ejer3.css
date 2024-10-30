@@ -1,0 +1,23 @@
+/* Inicializa los contadores */
+body {
+    counter-reset: section;
+}
+
+/* Estilos para los títulos h2 (Partes) */
+section h2:before {
+    content: "Parte " counter(section) ": ";
+    counter-increment: section;
+}
+
+/* Inicializa el contador de subsecciones para cada nueva sección (h2) */
+article {
+    counter-reset: subsection;
+}
+
+/* Estilos para los títulos h3 (Subsecciones) con paréntesis de cierre en lugar de puntos */
+/* Aplica el formato "1.1) Europa", "1.2) Asia", etc. */
+
+section h3:before {
+    content: counter(section) "." counter(subsection) ") "; /* Cambiar el . por ) */
+    counter-increment: subsection;
+}
