@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const elementos= [1,2,3,4,5];
+        // una primera forma de asignar elementos a los numeros 
+        let a = elementos[0];
+        let b= elementos[1];
+
+        // otra forma de hacerlo
+        /**
+        *let [primero, segundo] = elementos;
+        * si cojes y pones en los parentesis [primero,, tercero]
+        * te selecciona el primero pasa del segundo y se va al tercero 
+        **/
+
+        console.log(elementos);
+        console.log(a);
+        console.log(b);
+
+        // forma de declarar un objeto literal
+
+        const articulo= {codigo:5, nombre:'teclado', precio:10};
+        //let codigo=articulo.codigo;
+        //let pepe= articulo.nombre;
+        //console.log(codigo);
+        //console.log(nombre);
+        const{codigo,precio}=articulo;
+        console.log(codigo, precio)
+
+        // ahora hacmos una funcion para que al precio se le añada el 21%
+        //function pvp(art){
+        //return art*1.21;
+        //}
+        //function pvp2({precio}){
+        //    return precio*1.21
+        //}
+
+        //console.log(pvp2(articulo));
+
+
+        // echo lo anterior con arrow
+        const pv2= ({precio}) => precio*1.21;
+        console.log(pv2(articulo));
+    </script>
+    
+</body>
+</html>

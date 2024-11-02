@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array y array doble la multiplicas</title>
+</head>
+<body>
+    <script>
+    // este ejercicio coje unos valores de un array simple y lo multiplica por 2
+    const numerossimples= [1,2,3,4];
+    document.write(numerossimples +"<br>");        
+    for (let i = 0; i < numerossimples.length; i++) {
+        const doble = numerossimples[i]*2;
+        document.write(doble);
+       
+    }
+    document.write("<br>"+"<br>")
+
+    // este ejercicio coje unos valores de un array simple y lo incrementa 1
+    document.write(numerossimples +"<br>");        
+    for (let i = 0; i < numerossimples.length; i++) {
+        const doble = numerossimples[i]+1;
+        document.write(doble);
+    }
+    
+    document.write("<br>"+"<br>")
+
+    //este ejercicio tiene una funcion que llama a otra para hacer las cuentas matematucas anteriores
+    const modificaArray=(num, fejecuta)=>{
+        const numsalida=[];
+        num.forEach(element => {
+            numsalida.push(fejecuta(element))
+        });
+        return numsalida;
+    }
+    
+    arrmod=modificaArray([3,4,5], valor=>valor -1);
+    document.write(arrmod);
+
+
+    document.write("<br>"+"<br>")
+
+
+    // este proximo ejercicio tiene un filtro, una funcion verifica que devuece true o false 
+    const filtraAray=(arrValores, fVerifica)=>{
+        const arrSalida=[];
+        arrValores.forEach(element => {
+            if(fVerifica(element))
+                    arrSalida.push(element)
+        });
+        return arrSalida;
+    }
+    
+     arrFiltrado=filtraAray([3,4,5,8,21], valor=> valor>5);
+    document.write(arrFiltrado);
+
+    document.write("<br>"+"<br>")
+
+
+    // ejercicio que verifica notas 
+
+    
+    </script>
+    
+</body>
+</html>

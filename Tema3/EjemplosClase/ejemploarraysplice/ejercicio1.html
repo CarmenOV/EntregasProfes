@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Guarda en un array la lista de la compra con Peras, Manzanas, Kiwis, 
+        Plátanos y Mandarinas. Haz los siguiente con splice */
+        const frutas =["peras", "manzanas", "kiwis", "platano", "mandarinas"];
+        document.write("lista comnpleta : " + frutas + "<br>"+ "<br>")
+
+
+        /* Elimina las manzanas (debe quedar Peras, Kiwis, Plátanos y Mandarinas)*/
+        let borrarmanzanas = frutas.splice(1,1);
+        document.write( "le quito las: "+ borrarmanzanas + " y la lista se quedaria asi : "+ frutas + "<br>"+ "<br>");
+
+
+        /* añadir detras de los platanos, naranjas y sandias*/ 
+        let anadirnaranjasysandias = frutas.splice(3, 0, "Naranjas" , "sandia");
+        document.write( "le añado  las naranjas y las sandias y la lista se quedaria asi : "+ frutas + "<br>"+ "<br>");
+
+
+        /* quitar los kiwis y por cerezas y nisperos*/
+        let quitakiwis = frutas.splice(1,1, "cerezas" , "nisperos ");
+        document.write("le quito el :  "+ quitakiwis + "y le añado las cerezas y los nisperos:" + frutas)
+
+
+
+
+
+        /*otra forma de recorrer la array
+        function elementoindividual(elemento){
+            console.log("- " + elemento )
+        }
+        frutas.forEach(elementoindividual);
+
+        otra forma de recorrer la array
+        function elementoindividual(elemento, indice){
+            console.log(indice + "" + elemento )
+        }
+        frutas.forEach(elementoindividual);
+
+    */
+
+
+
+    // const elementoindividual=(elemento)=>console.log(elemento);
+    //  frutas.forEach((elemento)=>console.log(elemento));
+    // frutas.forEach((elemento, indice, frutas)=>console.log(elemento));
+
+    frutas.forEach(el =>{
+        console.log(el)
+    });
+
+    </script>
+    
+</body>
+</html>

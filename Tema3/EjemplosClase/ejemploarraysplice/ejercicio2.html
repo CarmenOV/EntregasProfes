@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const persona = {
+            nombre: 'Juan',
+            grupo :'1smr',
+            notas:[4,6],
+                    showNotas: function(){console.log(" las notas son : " + this.notas)},
+                    shownotass: function(){this.notas.forEach(element=>{console.log(element)})},
+
+                    addNota:function(nota){this.notas.push(nota)},
+
+                    addNotas: function(arrNotas){this.notas=this.notas.concat(arrNotas)},
+
+                    filtrarNotas: function(filtro){
+                        let arsalida=[];
+                        this.notas.forEach((element) =>
+                        if(filtro(element))
+                            arsalida.push(element);
+                        
+                        ) 
+                        
+                        return arsalida;
+                    }
+                        
+                        
+                   
+                            
+                        
+                }
+
+                    
+
+                    
+
+        };
+    
+
+
+        console.log(persona);
+        persona.showNotas();
+        persona.shownotass();
+        persona.addNota(8);
+        persona.addNotas([7,6,9]);
+        persona.showNotas();
+        persona.shownotass();
+        //console.log(alumnos.notas.sort((n1, n2)=> n1 - n2));
+
+        const alumnos =[ 
+            {nombre: 'Juan',grupo :'1smr',notas:[4,6], edad: '23'},
+
+            {nombre:'aPepe',grupo : '2srms',notas: [5,8], edad :'34'}];
+
+            
+
+// uno que te lo ordene po nombre
+
+        const comparealumno = (alumno1, alumno2) => {
+        return alumno1.nombre.localeCompare(alumno2.nombre);
+        };
+
+        console.log(alumnos.sort(comparealumno));
+        
+// que te lo ordene por edad
+// que te lo ordene por nota 
+
+       
+        const comparedad = (alumno1, alumno2) => {
+            return alumno1.edad - alumno2.edad;
+        }
+       // alumnos.sort(comparedad);
+        console.log(alumnos.sort(comparedad));
+
+        
+   
+
+    </script>
+</body>
+</html>
