@@ -1,0 +1,148 @@
+
+/* ESTILOS GENERALES */
+* {
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* BARRA DE NAVEGACIÓN */
+nav {
+  height: 70px;
+  background-color: #d9d9d9;
+  padding: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav > ul {
+  margin: 0 auto;
+}
+
+.nav li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.nav > li {
+  float: left;
+}
+
+.nav li a:hover {
+  background-color: rgb(71, 53, 202);
+}
+
+.nav li ul {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+  background-color: rgb(71, 53, 202);
+  margin-top: 0;
+}
+
+.nav li:hover > ul {
+  display: block;
+}
+
+.nav li ul li {
+  position: relative;
+}
+
+.nav li ul li ul {
+  left: 140px;
+  top: 0;
+}
+
+.nav li ul li a {
+  background-color: rgb(47, 255, 102);
+}
+
+.nav li ul li a:hover {
+  background-color: rgb(71, 53, 202);
+}
+
+.nav li ul li ul li {
+  background-color: rgb(47, 255, 102);
+}
+
+.nav li:hover > a {
+  background-color: rgb(71, 53, 202);
+}
+
+.nav li ul li:hover > a {
+  background-color: rgb(71, 53, 202);
+}
+
+.nav li ul li ul li:hover > a {
+  background-color: rgb(71, 53, 202);
+}
+
+nav a {
+  color: black;
+  font-weight: bold;
+}
+
+.iliberis a {
+  background-color: rgb(233, 77, 103);
+  color: white;
+}
+
+.iliberis a:hover {
+  color: black;
+}
+
+.nav-logo {
+  width: 222px;
+  border: 2px solid rgb(0, 130, 35);
+  float: right;
+  margin-top: -15px;
+}
+
+/* MAIN */
+.fondo {
+  width: 100vw;
+  height: 70vh;
+  background: url("https://picsum.photos/2000/1000")no-repeat;
+  background-position: center;
+  color: white;
+  text-align: center;
+  margin-top: 70px;
+  background-attachment: fixed;
+  position: relative;
+  z-index: -1;
+}
+
+.fondo div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 5px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+p {
+  font-size: 30px;
+}
+
+button {
+  background-color: rgb(251, 106, 53);
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 10%;
+}
