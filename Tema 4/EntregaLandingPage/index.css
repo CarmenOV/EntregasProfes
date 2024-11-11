@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Raleway";
+    src: url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variant: normal;
+
+}
+body{
+    font-family: Raleway, sans-serif;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    justify-content: flex-end;
+    background-color: #152a4e;
+    padding-right: 400px; 
+
+}
+
+a{
+    color: white;
+    padding: 10px;
+}
+
+#principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+  
+#texto {
+    width:200px;
+    margin-right: 20px; 
+}
+
+h3{
+    font-size: 13px;
+}
+#logo {
+    margin-left: 20px;
+    
+}
+#boton {
+    background-color: #a25de2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}

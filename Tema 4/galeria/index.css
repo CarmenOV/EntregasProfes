@@ -1,0 +1,55 @@
+header h1{
+  text-align: center;
+}
+
+.container{
+  padding: 5px;
+  display: flex;
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Agrega esto para centrar el contenedor */
+}
+
+img{
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto; /* Agrega esto para centrar el contenedor */
+  max-width: 900px; /* Añade un ancho máximo al contenedor */
+}
+
+article {
+  max-width: 300px; /* Ajusta el ancho máximo del artículo */
+}
+
+figure {
+  margin-left: 20px;
+}
+
+
+
+.about3 {
+  display: flex;
+  flex-direction: row-reverse; /* Cambia a row-reverse para que la imagen esté a la izquierda del texto */
+  align-items: center;
+  margin: 0 auto; /* Agrega esto para centrar el contenedor */
+  max-width: 900px; /* Añade un ancho máximo al contenedor */
+  justify-content: center; /* Agrega esto para centrar horizontalmente el contenido */
+}
+
+.article3{
+  max-width: 300px; /* Ajusta el ancho máximo del artículo */
+}
+
+.figure3 {
+  margin-right: 20px;
+}

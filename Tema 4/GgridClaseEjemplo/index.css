@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.grid{
+    width: 90%;
+    height: 500px;
+    outline: 3px solid;
+    margin: 0 auto;
+    display: grid;
+
+    /*grid-template-columns: 200px 300px auto;
+    columnas de 200, 300 y auto */
+
+    /*grid-template-columns: 1fr 2fr 1fr;
+    columnas de 1fr 2fr 1fr
+    otra forma muy parecida a la anterior 
+    grid-template-columns: 200px 1fr 20%;*/
+    /*grid-template-columns: repeat(3, 1fr);*/
+    /*se crea 3 y se repite el patron de tamaño de columnas 
+        grid-template-columns: repeat(3, 30px 80px);
+    */
+    /*grid-template-rows: repeat(3, auto);*/
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(2, 200px);
+    
+    /*espaciado entre los elementos primero vemos entre filas y despues entre columnas
+    row-gap: 10px;
+    column-gap: 20px;
+
+    esto coje el primero el row y el segundo el column
+    gap: 20px 10px;
+
+    ahora si pones solo un valor coge los dos, le poner lo mismo a todo
+    gap: 20px;
+     para las columnas que los haas por defecto 
+    grid-auto-flow: column;
+
+    para que rellene huecos 
+    grid-auto-flow: dense;
+
+alinear en vertical 
+justify-items: start;
+justify-items: end;
+justify-items: center ;
+
+
+
+align-items: start;
+align-items: end;
+*/
+/* align-items: center;
+justify-items: center;
+ place-items: end start; */
+ /*primero va el aling items y despues el justify*/
+
+ justify-content: center;
+ align-content: center;
+ justify-content: space-between;
+ align-content: space-between;
+/* 
+ place-content: center center;
+ place-content: center start;
+ place-content: center end;
+ place-content: center space-between;
+ place-content: center space-around;
+ place-content: center space-evenly; */
+ place-content: start center;
+ ;
+}
+
+.grid_item{
+font-size: 3rem;
+text-align: center;
+border: 1px solid;
+color: aliceblue;
+}
+
+.grid_item:nth-child(1){ 
+    background-color: rgb(207, 71, 99);
+     /*le digo que se coloque entre la linea 3 y la linea 5 dejando huecos al inicio
+    esta es por filas y columnas */
+    /* grid-column-start: 3;
+    grid-column-end: 5;  */
+    /* le digo que baje a la fila dos y que este hasta la fila 3 que acaba */
+    /* grid-row-start: 2;
+    grid-row-end: 3; */
+    /* align-self: stretch;
+    align-self:start ;
+    align-self: end;
+    justify-self: start;
+    justify-self: end; */
+
+    order: 5;
+
+
+}
+
+.grid_item:nth-child(2){ 
+    background-color: rgb(116, 116, 255);
+
+    /* vamos a ahorrar codigo  es como si pusieras start y end el primero hace alusion al start y el segundo al end*/
+    /* grid-column: 3 / 5;
+
+    grid-row: 3 / 4;
+ */
+}
+.grid_item:nth-child(3){    
+    background-color: rgb(5, 130, 134);  
+    /*le ponemos el inicio y le indicamos cuantos espacios vamos a coger */  
+    /* grid-row: 2 / span 2;
+    grid-column: 1 / span 2; */
+    order: -5;
+
+}    
+
+.grid_item:nth-child(4){    
+    background-color: rgb(172, 255, 117);    
+    /*le digo que empiece en la segunda columna y que llegue hasta el fnal que es la -1*/
+    /* grid-column: 2 / -1; */
+    order: -4;
+}        
+
+.grid_item:nth-child(5){    
+    background-color: darkmagenta;    
+}   
+
+.grid_item:nth-child(6){    
+    background-color: rgb(255, 127, 206);  
+    /*la grid area  hay que ponerle primero la 
+    grid-row-start/
+    grid-colum-start/
+    grid-row-end/grid-column-end
+    todo esto con numeros */
+    /* grid-area:1/3/-1/-1 ;   */
+}
