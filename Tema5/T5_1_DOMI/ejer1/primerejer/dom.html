@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RELACION T5_1</title>
+</head>
+<body>
+    <!--
+        Crea una página web con al menos tres párrafos de texto y dentro de ellos un número
+        indeterminado de enlaces (al menos uno debe enlazar a google). Haciendo tan sólo
+        uso del DOM muestra los siguientes datos:
+            • Número de enlaces de la página
+            • Dirección a la que enlaza el penúltimo enlace
+            • Numero de enlaces que enlazan a google
+            • Número de enlaces del tercer párrafo
+     -->
+
+    
+     <p>Esto es un parrafo Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <a href="https://www.google.com">Google</a> Corrupti, iure aliquid suscipit id numquam dolor unde assumenda, quaerat,
+         ratione ut eveniet! Sapiente cumque magni nobis vitae ab ea? Aliquam, labore?
+    </p> 
+    <p>Esto es un parrafo Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <a href="wikipedia.org">wikipedia</a> Corrupti, iure aliquid suscipit id numquam dolor unde assumenda, quaerat,
+         ratione ut eveniet! Sapiente cumque magni nobis vitae ab ea? Aliquam, labore?
+    </p> 
+    <p>Esto es un parrafo Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <a href="https://educacionadistancia.juntadeandalucia.es/">moodel centros </a> Corrupti, iure aliquid suscipit id numquam dolor unde assumenda, quaerat,
+         ratione ut eveniet! Sapiente cumque magni nobis vitae ab ea? <a href="google.com">google</a>Aliquam, labore?
+    </p> 
+
+    <script>
+        // esto me da una array con los enclaes 
+        var enlaces = document.getElementsByTagName('a');
+        console.log(enlaces);
+
+        // esto me dice cuantos enlaces hay
+        var enlacescont = document.getElementById('a');
+        console.log(enlaces.length + " enlaces hay");
+
+        // direccion de enlace del penultimo enlace
+        var penultimoenlace = document.getElementsByTagName('a')[enlaces.length - 2];
+        console.log(penultimoenlace.href);
+
+    
+
+
+        
+        // numero de enlaces que tiene el tercer parrafo
+        var enlacetercerparrafo = document.getElementsByTagName('p')[2];
+        console.log(enlacetercerparrafo.getElementsByTagName('a').length);
+
+
+       
+
+    </script>
+   
+    
+</body>
+</html>

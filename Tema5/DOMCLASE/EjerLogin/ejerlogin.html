@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        ejercicio de login, tenemos un formulario con un usuario y una contraseña
+        y un boton enviar, queremos que cuando le de a enviar primero mire a ver si falta el usuario 
+        o la contraseña si esta todo bien que lo muestre por pantalla
+    </title>
+</head>
+<body>
+    <h1>ejercicio de login</h1>
+
+    <form name="my" onsubmit="return false">
+        <label for="usu">usuario</label>
+        <input type="text" name="usu"><br><br>
+
+        <label for="contra">contraseña</label>
+        <input type="text" name="contra"><br><br>
+
+        <input type="submit" name="enviar" onclick="valida()">
+    </form>
+
+   
+
+    <script>
+       let formulario = document.forms.my;
+
+       let elementusu = formulario.elements.usu;
+       let elementcontra = formulario.elements.contra;
+
+       function valida(){
+        if(elementusu.value==""){
+                console.log("falta el usuario");
+           
+            }else if (elementcontra.value==""){  
+                console.log("falta la contraseña");
+            
+            }else{
+               alert("el usuario es :"+ elementusu.value + "la contraseña es " + elementcontra.value)
+               
+            }
+       }
+    </script>
+
+</body>
+</html>
