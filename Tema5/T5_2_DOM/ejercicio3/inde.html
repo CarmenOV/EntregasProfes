@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículo</title>
+    <script> 
+        function culta() {
+            const textoCompleto = document.getElementById('texto-completo');
+            const enlace = document.getElementById('ver-articulo');
+
+            if (textoCompleto.style.display === 'none') {
+                textoCompleto.style.display = 'block';
+                enlace.textContent = 'Ocultar Artículo';  
+            } else {
+                textoCompleto.style.display = 'none';
+                enlace.textContent = 'Ver Artículo Completo';  }
+        }
+    </script> 
+</head>
+<body>
+
+    <div class="articulo">
+        <p id="texto-parcial">
+            Este es el comienzo del artículo... <span id="continuar"></span>
+        </p>
+        <div id="texto-completo" style="display:none;">
+            Aquí sigue el contenido completo del artículo. Puedes agregar más información, imágenes y cualquier otro dato relevante.
+        </div>
+        <a href="#" id="ver-articulo">Ver Artículo Completo</a>
+    </div>
+
+</body>
+</html>

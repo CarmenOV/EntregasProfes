@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+    <h2>Lista de Elementos</h2>
+
+    <ul id="lista">
+
+    </ul>
+
+    <button id="agregar">Agregar Elemento</button>
+
+    <script>
+        let contador = 1;
+
+        document.getElementById('agregar').addEventListener('click', function() {
+
+            const nuevoElemento = document.createElement('li');
+            nuevoElemento.textContent = `Elemento ${contador}`;
+
+            // Añadir el nuevo elemento a la lista
+            document.getElementById('lista').appendChild(nuevoElemento);
+
+            // Incrementar 
+            contador++;
+        });
+    </script>
+
+</body>
+</html>
