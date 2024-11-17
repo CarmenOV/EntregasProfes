@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tablero {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(4, 100px);
+            gap: 5px;
+        }
+
+        .casilla {
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000;
+            color: white;
+            font-size: 24px;
+        }
+    </style>
+   
+</head>
+<body>
+
+
+    <div id="tablero"></div>
+    <button id="reiniciar">Reiniciar Juego</button>
+
+
+    <script src="tablero.js"></script>
+
+
+</body>
+</html>
