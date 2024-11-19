@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Stopwatch</title>
+    <script defer src="funciones.js"></script>
+    <style>
+        section {
+            text-align: center;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: orange;
+            width: 500px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Temporizador / Stopwatch</h1>
+        <h3>Vanilla JavaScript Stopwatch</h3>
+        <div class="tiempo">0 segundos</div>
+        <button id="start" onclick="start()">Start</button>
+        <button id="stop" onclick="stop()">Stop</button>
+        <button id="reset" onclick="reset()">Reset</button>
+    </section>
+</body>
+</html>
