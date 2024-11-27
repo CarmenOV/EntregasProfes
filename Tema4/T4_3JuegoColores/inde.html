@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Adivina el Color</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #contenedorJuego {
+            margin-top: 20px;
+        }
+
+        .botonColor {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #valorRGB {
+            font-size: 24px;
+            margin: 20px;
+        }
+
+        .mensaje {
+            font-size: 24px;
+            color: #d9534f;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Juego Adivina el Color</h1>
+
+    <div id="valorRGB">RGB: (255, 0, 0)</div>
+    <div id="contenedorJuego">    </div>
+
+    <div id="mensaje" class="mensaje"></div>
+
+    <script>
+        const colores = [];  // Array para almacenar los colores generados aleatoriamente
+        let colorCorrecto;   // Almacena el color RGB que el jugador debe adivinar
+
+        // Función para generar un color RGB aleatorio
+        function obtenerColorAleatorio() {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        // Función para inicializar el juego
+        function inicializarJuego() {
+            // Generar un color correcto aleatorio
+            colorCorrecto = obtenerColorAleatorio();
+            // Mostrar el valor RGB del color correcto
+            document.getElementById("valorRGB").textContent = `RGB: ${colorCorrecto}`;
+
+            // Limpiar colores anteriores y mensajes
+            document.getElementById("mensaje").textContent = "";
+
+            // Generar un array de 6 colores aleatorios
+            colores.length = 0; 
+            for (let i = 0; i < 6; i++) {
+                colores.push(obtenerColorAleatorio());
+            }
+
+            // Colocar el color correcto en uno de los botones aleatoriamente
+            const indiceColorCorrecto = Math.floor(Math.random() * 6);
+            colores[indiceColorCorrecto] = colorCorrecto;
+
+            // Crear los botones dinámicamente para las 6 opciones de color
+            const contenedorJuego = document.getElementById("contenedorJuego");
+            contenedorJuego.innerHTML = '';
+            for (let i = 0; i < 6; i++) {
+                const boton = document.createElement("div");
+                boton.className = "botonColor";
+                boton.style.backgroundColor = colores[i];
+                boton.addEventListener("click", () => comprobarRespuesta(colores[i]));
+                contenedorJuego.appendChild(boton);
+            }
+        }
+
+        // Función para comprobar la respuesta del jugador
+        function comprobarRespuesta(colorSeleccionado) {
+            if (colorSeleccionado === colorCorrecto) {
+                document.getElementById("mensaje").textContent = "bien";
+            } else {
+                document.getElementById("mensaje").textContent = "mal";
+            }
+        }
+
+        // Iniciar el juego
+        inicializarJuego();
+    </script>
+
+</body>
+</html>
