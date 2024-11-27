@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página con enlaces para cambio de color</title>
-    <script src="funciones.js"></script>
-   
+    <link rel="stylesheet" id="theme-style" href="normal.css"> 
 </head>
 <body id="body">
     <div id="div">
-        <div id="aa">
-         <a href="#" onclick="cambiarTema()" id="a">Tema normal </a>
-        <a href="#" onclick="cambiarTema2()" id="a2">Tema minimalista </a>    
+        <div id="a">
+            <a href="#" onclick="cambiarTema('normal.css')">Tema normal</a>
+            <a href="#" onclick="cambiarTema('minimalista.css')">Tema minimalista</a>    
         </div>
-       
+
         <h1 id="h1">Página de ejemplo</h1>
 
         <p id="p1">Lorem ipsum In, deserunt tenetur? Laudantium quasi tempore iure itaque temporibus sequi harum dolores, 
@@ -27,9 +26,17 @@
             commodi dolore nostrum aperiam!
         </p>
 
-        <p id="p3">Lorem ipsum dolorror molestiae saepe voluptatum vero omnis?</p>
-        <p id="p4">Este esta dentro de un marco </p>
+        <p id="p3">Lorem ipsum dolor molestiae saepe voluptatum vero omnis?</p>
+        <p id="p4">Este está dentro de un marco</p>
 
     </div>
+
+    <script>
+        function cambiarTema(tema) {
+            // Cambiar la hoja de estilo
+            const themeStyle = document.getElementById("theme-style");
+            themeStyle.href = tema;  // Cambiar el archivo CSS según el tema
+        }
+    </script>
 </body>
 </html>

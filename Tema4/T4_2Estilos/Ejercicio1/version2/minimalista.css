@@ -1,0 +1,36 @@
+/* Estilos para el tema minimalista */
+body {
+    background-color: lightyellow;
+    color: black;
+    font-family: Verdana, sans-serif;
+}
+
+#div {
+    padding: 20px;
+}
+
+h1 {
+    color: black;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+a {
+    color: blue;
+    font-size: 20px;
+    font-family: Verdana, sans-serif;
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkblue;
+}
+
+#p4 {
+    background-color: yellow;
+    border: 1px solid black;
+}

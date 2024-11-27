@@ -1,0 +1,34 @@
+/* Estilos para el tema normal */
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+#div {
+    padding: 20px;
+}
+
+h1 {
+    color: darkblue;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkblue;
+}
+
+#p4 {
+    background-color: white;
+    border: none;
+}

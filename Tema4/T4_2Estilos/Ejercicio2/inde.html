@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Tamaño y Alineación del Texto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .controls {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h1>Manipula el Texto de la Página</h1>
+
+        <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore culpa earum nihil officia beatae aliquam, molestias, ratione doloribus est ipsam commodi ducimus cum quo reprehenderit praesentium neque delectus omnis optio soluta quae amet consequatur temporibus consequuntur! Dicta deserunt aspernatur velit eligendi excepturi. Totam iure consequatur necessitatibus laudantium fugiat harum tempora.</p>
+        <p id="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore culpa earum nihil officia beatae aliquam, molestias, ratione doloribus est ipsam commodi ducimus cum quo reprehenderit praesentium neque delectus omnis optio soluta quae amet consequatur temporibus consequuntur! Dicta deserunt aspernatur velit eligendi excepturi. Totam iure consequatur necessitatibus laudantium fugiat harum tempora.</p>
+        <p id="p3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore culpa earum nihil officia beatae aliquam, molestias, ratione doloribus est ipsam commodi ducimus cum quo reprehenderit praesentium neque delectus omnis optio soluta quae amet consequatur temporibus consequuntur! Dicta deserunt aspernatur velit eligendi excepturi. Totam iure consequatur necessitatibus laudantium fugiat harum tempora.</p>
+        <p id="p4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore culpa earum nihil officia beatae aliquam, molestias, ratione doloribus est ipsam commodi ducimus cum quo reprehenderit praesentium neque delectus omnis optio soluta quae amet consequatur temporibus consequuntur! Dicta deserunt aspernatur velit eligendi excepturi. Totam iure consequatur necessitatibus laudantium fugiat harum tempora.</p>
+      
+        <!-- Controles -->
+        <div class="controls">
+            <button onclick="cambiarTamaño('incrementar')">Aumentar Tamaño</button>
+            <button onclick="cambiarTamaño('disminuir')">Disminuir Tamaño</button>
+    
+
+        </div>
+    </div>
+
+    <script>
+        // Función para incrementar el tamaño de la fuente
+        function cambiarTamaño(accion) {
+            var parrafos = document.querySelectorAll('p');
+            parrafos.forEach(function(parrafo) {
+                var estiloActual = window.getComputedStyle(parrafo, null).getPropertyValue('font-size');
+                var tamañoActual = parseInt(estiloActual); // Convertir el tamaño actual a número entero
+
+                if (accion === 'incrementar') {
+                    parrafo.style.fontSize = (tamañoActual + 2) + 'px'; // Aumentar el tamaño en 2px
+                } else if (accion === 'disminuir') {
+                    parrafo.style.fontSize = (tamañoActual - 2) + 'px'; // Disminuir el tamaño en 2px
+                }
+            });
+        }
+
+    
+    </script>
+
+</body>
+</html>
