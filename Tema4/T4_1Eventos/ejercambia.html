@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reemplazar Ampersand por "and"</title>
+    <script>
+        // Función que reemplaza los ampersand (&) por "and" y muestra el cambio en pantalla
+        function reemplazarAmpersand() {
+            // Obtener el campo de texto
+            let campo = document.getElementById('campoTexto');
+            
+            // Obtener el valor del campo antes de hacer el reemplazo
+            let textoOriginal = campo.value;
+            
+            // Reemplazar todos los ampersand (&) por "and"
+            let textoCambiado = textoOriginal.replace(/&/g, "and");
+            
+            // Actualizar el valor del campo con el nuevo texto
+            campo.value = textoCambiado;
+            
+            // Mostrar el mensaje de cambio en pantalla
+            document.getElementById('mensaje').innerText = 
+                `Texto original: "${textoOriginal}"\nTexto modificado: "${textoCambiado}"`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Formulario de ejemplo</h1>
+
+    <form>
+        <label for="campoTexto">Escribe algo (usa el carácter "&"):</label><br>
+        <input type="text" id="campoTexto" name="campoTexto" onblur="reemplazarAmpersand()" placeholder="Escribe algo...">
+    </form>
+
+    <h3>Mensaje de cambio:</h3>
+    <pre id="mensaje"></pre>
+</body>
+</html>

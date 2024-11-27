@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujar con el ratón</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dibuja en el canvas con el ratón</h1>
+    <p>Mueve el ratón sobre las celdas de la tabla. Usa Ctrl para pintar de rojo, Shift para pintar de azul.</p>
+    <div id="canvas"></div>
+
+    <script>
+        // Función que se ejecuta cuando la página se carga completamente
+        function crearCanvas() {
+            const rows = 10;  // Número de filas en el "canvas"
+            const cols = 10;  // Número de columnas en el "canvas"
+            let canvas = document.createElement('table');
+            
+            // Crear las filas y celdas de la tabla
+            for (let i = 0; i < rows; i++) {
+                let row = canvas.insertRow();
+                for (let j = 0; j < cols; j++) {
+                    let cell = row.insertCell();
+                    cell.addEventListener('mousemove', dibujar);  // Detectar movimiento sobre cada celda
+                }
+            }
+            
+            // Agregar la tabla al div con id 'canvas'
+            document.getElementById('canvas').appendChild(canvas);
+        }
+
+        // Función que se ejecuta cuando el ratón se mueve sobre una celda
+        function dibujar(event) {
+            // Si las teclas Ctrl o Shift están presionadas, pintamos
+            if (event.ctrlKey) {
+                // Si Ctrl está presionado, pintamos de rojo
+                event.target.style.backgroundColor = 'red';
+            } else if (event.shiftKey) {
+                // Si Shift está presionado, pintamos de azul
+                event.target.style.backgroundColor = 'blue';
+            }
+        }
+
+        // Crear el canvas cuando la página se haya cargado completamente
+        window.addEventListener('load', crearCanvas);
+    </script>
+</body>
+</html>

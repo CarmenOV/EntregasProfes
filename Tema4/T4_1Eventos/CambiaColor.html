@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores en Hexadecimal</title>
+    <style>
+        /* Estilos para la tabla */
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        td {
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+  
+    <table>
+        <tr>
+            <td id="color1" data-color="#0000FF" onmouseover="cambiarColor(this)" onmouseout="restaurarColor(this)">azul</td>
+            <td id="color2" data-color="#FF0000" onmouseover="cambiarColor(this)" onmouseout="restaurarColor(this)">rojo</td>
+            <td id="color3" data-color="#00FF00" onmouseover="cambiarColor(this)" onmouseout="restaurarColor(this)">verde</td>
+            <td id="color4" data-color="#FFFF00" onmouseover="cambiarColor(this)" onmouseout="restaurarColor(this)">amarillo</td>
+        </tr>
+        <tr>
+            <td id="color5" data-color="#00FFFF" onmouseover="cambiarColor(this)" onmouseout="restaurarColor(this)">cian</td>
+            <td id="color6" data-color="#FF00FF" onmouseover="cambiarColor(this)" onmouseout="restaurarColor(this)">magenta</td>
+            <td id="color7" data-color="#800080" onmouseover="cambiarColor(this)" onmouseout="restaurarColor(this)">púrpura</td>
+            <td id="color8" data-color="#A52A2A" onmouseover="cambiarColor(this)" onmouseout="restaurarColor(this)">marrón</td>
+        </tr>
+        <tr>
+            <td id="color9" data-color="#808080" onmouseover="cambiarColor(this)" onmouseout="restaurarColor(this)">gris</td>
+            <td id="color10" data-color="#000000" onmouseover="cambiarColor(this)" onmouseout="restaurarColor(this)">negro</td>
+            <td id="color11" data-color="#FFFFFF" onmouseover="cambiarColor(this)" onmouseout="restaurarColor(this)">blanco</td>
+            <td id="color12" data-color="#D3D3D3" onmouseover="cambiarColor(this)" onmouseout="restaurarColor(this)">gris claro</td>
+        </tr>
+    </table>
+
+    <script>
+        // Función que cambia el color de la celda al pasar el ratón
+        function cambiarColor(celda) {
+            // Obtener el color en formato hexadecimal de la celda
+            const color = celda.getAttribute("data-color");
+            celda.style.backgroundColor = color;  // Cambiar el color de fondo de la celda
+            celda.innerHTML = color;  // Mostrar el código hexadecimal
+        }
+
+        // Función que restaura el nombre del color al sacar el ratón
+        function restaurarColor(celda) {
+            const colorData = celda.getAttribute("data-color");
+            switch (colorData) {
+                case '#0000FF':
+                    celda.innerHTML = 'azul';
+                    break;
+                case '#FF0000':
+                    celda.innerHTML = 'rojo';
+                    break;
+                case '#00FF00':
+                    celda.innerHTML = 'verde';
+                    break;
+                case '#FFFF00':
+                    celda.innerHTML = 'amarillo';
+                    break;
+                case '#00FFFF':
+                    celda.innerHTML = 'cian';
+                    break;
+                case '#FF00FF':
+                    celda.innerHTML = 'magenta';
+                    break;
+                case '#800080':
+                    celda.innerHTML = 'púrpura';
+                    break;
+                case '#A52A2A':
+                    celda.innerHTML = 'marrón';
+                    break;
+                case '#808080':
+                    celda.innerHTML = 'gris';
+                    break;
+                case '#000000':
+                    celda.innerHTML = 'negro';
+                    break;
+                case '#FFFFFF':
+                    celda.innerHTML = 'blanco';
+                    break;
+                case '#D3D3D3':
+                    celda.innerHTML = 'gris claro';
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

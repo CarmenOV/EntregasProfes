@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posición del Ratón</title>
+    
+</head>
+<body>
+    <!-- Div para mostrar la posición del ratón -->
+    <div id="posicion">Mueve el ratón para ver la posición aquí</div>
+
+    <!-- Script JavaScript en el mismo archivo -->
+    <script>
+        // Función para mostrar la posición del ratón
+        function mostrarPosicion(event) {
+            // Selecciona el div con el ID "posicion"
+            var divPosicion = document.getElementById("posicion");
+
+            // Actualiza el contenido del div con las coordenadas del ratón
+            divPosicion.innerHTML = "X: " + event.clientX + " - Y: " + event.clientY;
+        }
+
+        // Asigna la función al evento `mousemove` en todo el documento
+        document.addEventListener("mousemove", mostrarPosicion);
+    </script>
+</body>
+</html>

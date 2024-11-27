@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujar y Borrar con el Ratón</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ddd;
+        }
+        #botones {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="canvas"></div>
+
+    <div id="botones">
+        <button onclick="borrarTodo()">Borrar todo </button>
+    </div>
+
+    <script>
+        // Función que se ejecuta cuando la página se carga completamente
+        function crearCanvas() {
+            const rows = 10;  // Número de filas en el "canvas"
+            const cols = 10;  // Número de columnas en el "canvas"
+            let canvas = document.createElement('table');
+            
+            // Crear las filas y celdas de la tabla
+            for (let i = 0; i < rows; i++) {
+                let row = canvas.insertRow();
+                for (let j = 0; j < cols; j++) {
+                    let cell = row.insertCell();
+                    cell.addEventListener('mousemove', dibujar);  // Detectar movimiento sobre cada celda
+                }
+            }
+            
+            // Agregar la tabla al div con id 'canvas'
+            document.getElementById('canvas').appendChild(canvas);
+        }
+
+        // Función que se ejecuta cuando el ratón se mueve sobre una celda
+        function dibujar(event) {
+            // Si las teclas Ctrl o Shift están presionadas, pintamos
+            if (event.ctrlKey) {
+                // Si Ctrl está presionado, pintamos de rojo
+                event.target.style.backgroundColor = 'red';
+            } else if (event.shiftKey) {
+                // Si Shift está presionado, pintamos de azul
+                event.target.style.backgroundColor = 'blue';
+            } else if (event.altKey) {
+                // Si Alt está presionado, borramos el color
+                event.target.style.backgroundColor = '';
+            }
+        }
+
+        // Función para borrar todo el canvas (limpiar las celdas)
+        function borrarTodo() {
+            const cells = document.querySelectorAll('#canvas td');
+            cells.forEach(cell => {
+                cell.style.backgroundColor = '';  // Limpiar el color de fondo
+            });
+        }
+
+        // Crear el canvas cuando la página se haya cargado completamente
+        window.addEventListener('load', crearCanvas);
+    </script>
+</body>
+</html>

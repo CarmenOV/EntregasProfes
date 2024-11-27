@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiempo Transcurrido desde la Carga</title>
+</head>
+<body>
+    <h1>Tiempo transcurrido desde la carga de la página:</h1>
+    <div id="tiempo">0 segundos</div>
+
+    <script>
+        // Función que se ejecuta cuando la página se carga completamente
+        function iniciarContadorTiempo() {
+            // Variable para almacenar el tiempo de inicio (cuando se carga la página)
+            var tiempoInicio = new Date();
+
+            // Función para actualizar el tiempo transcurrido
+            function actualizarTiempo() {
+                // Obtenemos el tiempo actual
+                var tiempoActual = new Date();
+
+                // Calculamos el tiempo transcurrido en segundos
+                var segundosTranscurridos = Math.floor((tiempoActual - tiempoInicio) / 1000);
+
+                // Actualizamos el contenido del div con el tiempo transcurrido
+                document.getElementById("tiempo").innerHTML = segundosTranscurridos + " segundos";
+            }
+
+            // Llamamos a actualizarTiempo cada segundo
+            setInterval(actualizarTiempo, 1000);
+        }
+
+    </script>
+</body>
+</html>
